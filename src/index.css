@@ -68,5 +68,5 @@ h3 {
 }
 
 .tag-card {
-  @apply mx-[10px] flex cursor-pointer items-center rounded-[20px] bg-[#fff] p-[10px_20px] shadow-[0px_3px_5px_0px_rgba(0,0,0,9%)] transition-all duration-300 hover:bg-[#e8e8e8] hover:shadow-none;
+  @apply mx-[10px] flex cursor-pointer items-center rounded-[20px] p-[10px_20px] shadow-[0px_3px_5px_0px_rgba(0,0,0,9%)] transition-all duration-300 hover:bg-[#e8e8e8] hover:shadow-none;
 }
