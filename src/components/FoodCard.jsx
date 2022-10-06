@@ -3,15 +3,15 @@ import { formatPrice } from '../utils'
 const FoodCard = ({ name, img, price, onClick }) => {
   return (
     <div
-      className="h-[200px] rounded-lg bg-cover bg-center cursor-pointer overflow-hidden p-[10px] relative shadow-md hover:shadow-3xl transition-shadow"
+      className="relative h-[200px] cursor-pointer overflow-hidden rounded-lg bg-cover bg-center p-[10px] shadow-md transition-shadow hover:shadow-3xl"
       onClick={onClick}
     >
       <img
         src={img}
         alt={name}
-        className="contrast-75 hover:contrast-100 hover:scale-[1.2] absolute top-0 left-0 object-cover w-[100%] h-[100%] transition-all duration-500"
+        className="absolute top-0 left-0 h-[100%] w-[100%] object-cover contrast-75 transition-all duration-500 hover:scale-[1.2] hover:contrast-100"
       />
-      <div className="absolute text-[20px] font-bold text-white p-[10px] w-[100%] bottom-0 left-0 bg-black/[0.44]">
+      <div className="absolute bottom-0 left-0 w-[100%] bg-black/[0.44] p-[10px] text-[20px] font-bold text-white">
         <h3>{name}</h3>
         <h3>{formatPrice(price)}</h3>
       </div>

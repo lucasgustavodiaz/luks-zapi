@@ -20,6 +20,7 @@
 
 * {
   scroll-behavior: smooth;
+  transition: all 0.3s ease 0s;
 }
 
 body {
@@ -38,22 +39,34 @@ h3 {
   @apply flex justify-center shadow-[0px_-2px_10px_0px] shadow-gray-300;
 }
 
+.dialog-shadow {
+  @apply fixed z-[4] h-[100%] w-[100%] bg-black/90;
+}
+
 .order-container {
-  @apply p-5 h-[100%] min-h-[100px] overflow-auto;
+  @apply h-[100%] min-h-[100px] overflow-auto p-5;
 }
 
 .order-content {
-  @apply p-[10px_5px] border-b border-gray-600;
+  @apply border-b border-gray-50 p-[10px];
 }
 
 .order-item {
-  @apply p-[10px_5px] grid grid-cols-[20px_150px_20px_60px] justify-between;
+  @apply grid grid-cols-[50px_100px_100px] items-center justify-between p-[10px_5px];
+}
+
+.order-quantitys {
+  @apply m-[5px] flex h-[35px] min-w-[100px] items-center rounded-[8px] p-[10px] shadow-[0px_6px_10px_0px_rgba(128,98,96,16%)];
+}
+
+.order-quantity-btn {
+  @apply mx-[10px] w-[23px] cursor-pointer text-center font-montserrat text-[20px] font-bold leading-[23px] text-[#ff0038] hover:bg-red-100;
 }
 
 .tag-menu {
-  @apply flex justify-evenly my-7;
+  @apply my-7 flex justify-evenly;
 }
 
 .tag-card {
-  @apply flex items-center bg-[#fff] rounded-[20px] p-[10px_20px] mx-[10px] cursor-pointer transition-all duration-300 shadow-[0px_3px_5px_0px_rgba(0,0,0,9%)] hover:bg-[#e8e8e8] hover:shadow-none;
+  @apply mx-[10px] flex cursor-pointer items-center rounded-[20px] bg-[#fff] p-[10px_20px] shadow-[0px_3px_5px_0px_rgba(0,0,0,9%)] transition-all duration-300 hover:bg-[#e8e8e8] hover:shadow-none;
 }

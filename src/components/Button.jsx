@@ -1,7 +1,7 @@
 const Button = ({ styles, text, onClick }) => (
   <button
     type="button"
-    className={`font-montserrat font-bold m-[10px] p-[10px] leading-5 text-[16px] h-[auto] text-white rounded-lg w-[200px] cursor-pointer bg-[#ff0038] text-center hover:opacity-70 active:opacity-100 outline-none ${styles} `}
+    className={`m-[10px] h-[auto] w-[200px] cursor-pointer rounded-lg bg-[#ff0038] p-[10px] text-center font-montserrat text-[16px] font-bold leading-[1.2] text-white outline-none hover:opacity-70 active:opacity-100 ${styles} `}
     onClick={onClick}
   >
     {text}

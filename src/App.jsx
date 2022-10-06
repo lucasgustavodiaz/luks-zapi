@@ -1,16 +1,14 @@
 import { Navbar, Banner, Menu, FoodDialog, Orders } from './components'
 
 import { useOpenFood } from './hooks/useOpenFood'
-import { useOrders } from './hooks/useOrders'
 
 const App = () => {
   const openFood = useOpenFood()
-  const orders = useOrders()
   return (
     <div className="w-full">
-      <FoodDialog {...openFood} {...orders} />
+      <FoodDialog {...openFood} />
       <Navbar />
-      <Orders {...orders} />
+      <Orders />
       <Banner />
       <Menu {...openFood} />
     </div>
