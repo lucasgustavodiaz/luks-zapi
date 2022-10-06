@@ -2,7 +2,7 @@ import { TOGGLE_CART_HIDDEN, ADD_ITEM, REMOVE_ITEM, CLEAR_CART } from './cart-ac
 import { addItemToCart, removeItemsToCart } from './cart-utils'
 
 const INITIAL_STATE = {
-  hidden: true,
+  show: false,
   cartItems: []
 }
 
@@ -11,7 +11,7 @@ const cartReducer = (state = INITIAL_STATE, action) => {
     case TOGGLE_CART_HIDDEN:
       return {
         ...state,
-        hidden: !state.hidden
+        show: !state.show
       }
     case ADD_ITEM:
       return {

@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import * as cartActions from '../redux/cart/cart-actions'
 
 const Orders = () => {
-  const hidden = useSelector(state => state.cart.hidden)
+  const show = useSelector(state => state.cart.show)
   const cartItems = useSelector(state => state.cart.cartItems)
   const dispatch = useDispatch()
 
@@ -18,10 +18,10 @@ const Orders = () => {
   }
   return (
     <div>
-      {hidden && <div div className="dialog-shadow" onClick={hadlerToggle} />}
+      {show && <div div className="dialog-shadow" onClick={hadlerToggle} />}
       <div
         className={`fixed right-0 top-[75px] z-10 flex h-[calc(100%-75px)] w-[340px] flex-col bg-white shadow-[4px_0px_5px_4px] shadow-gray-500 ${
-          hidden ? 'translate-x-0' : 'translate-x-full'
+          show ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-500`}
       >
         {cartItems.length === 0 ? (

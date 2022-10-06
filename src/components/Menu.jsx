@@ -24,9 +24,8 @@ const Menu = ({ setOpenFood }) => {
           )}
           {Categories.map(category => (
             <div
-              className="tag-card"
+              className={`tag-card ${category.section === section ? 'bg-[#e8e8e8]' : 'bg-[#fff]'}`}
               onClick={() => setSection(category.section)}
-              selected={category.section === section}
             >
               <img src={category.imgTag} alt={category.section} className="mr-[20px] w-[30px] rounded-full" />
               <p className="text-[#5e5e5e]">{category.section}</p>
