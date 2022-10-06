@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@layer base {
+  h1 {
+    @apply text-3xl;
+    @apply font-bold;
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-bold;
+  }
+  h3 {
+    @apply text-xl;
+    @apply font-bold;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  background-color: #fafaf8;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dialog-footer {
+  @apply flex justify-center shadow-[0px_-2px_10px_0px] shadow-gray-300;
+}
+
+.order-container {
+  @apply p-5 h-[100%] min-h-[100px] overflow-auto;
+}
+
+.order-content {
+  @apply p-[10px_5px] border-b border-gray-600;
+}
+
+.order-item {
+  @apply p-[10px_5px] grid grid-cols-[20px_150px_20px_60px] justify-between;
+}
+
+.tag-menu {
+  @apply flex justify-evenly my-7;
+}
+
+.tag-card {
+  @apply flex items-center bg-[#fff] rounded-[20px] p-[10px_20px] mx-[10px] cursor-pointer transition-all duration-300 shadow-[0px_3px_5px_0px_rgba(0,0,0,9%)] hover:bg-[#e8e8e8] hover:shadow-none;
+}
