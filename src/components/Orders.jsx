@@ -3,6 +3,7 @@ import OrderCant from './OrderCant'
 import { formatPrice } from '../utils'
 import { useSelector, useDispatch } from 'react-redux'
 import * as cartActions from '../redux/cart/cart-actions'
+import { Link } from 'react-router-dom'
 
 const Orders = () => {
   const show = useSelector(state => state.cart.show)
@@ -47,7 +48,9 @@ const Orders = () => {
           </div>
         )}
         <div className="dialog-footer">
-          <Button text={`Ir a pagar ${formatPrice(total)}`} />
+          <Link to="/checkout" onClick={hadlerToggle}>
+            <Button text={`Ir a pagar ${formatPrice(total)}`} />
+          </Link>
         </div>
       </div>
     </div>

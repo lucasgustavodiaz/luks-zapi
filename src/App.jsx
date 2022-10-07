@@ -1,17 +1,20 @@
-import { Navbar, Banner, Menu, FoodDialog, Orders } from './components'
-
+import { Navbar, Orders } from './components'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useOpenFood } from './hooks/useOpenFood'
+
+import { Home, Checkout } from './pages/'
 
 const App = () => {
   const openFood = useOpenFood()
   return (
-    <div className="w-full">
-      <FoodDialog {...openFood} />
+    <BrowserRouter className="w-full">
       <Navbar />
       <Orders />
-      <Banner />
-      <Menu {...openFood} />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home openFood={openFood} />} />
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

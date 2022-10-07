@@ -12,6 +12,7 @@ const FoodDialogContainer = ({ openFood, setOpenFood }) => {
 
   const addToOrder = () => {
     dispatch(cartActions.addItem(openFood))
+    handlerClose()
   }
 
   return (

@@ -3,16 +3,13 @@
 @tailwind base;
 @layer base {
   h1 {
-    @apply text-3xl;
-    @apply font-bold;
+    @apply text-3xl font-bold;
   }
   h2 {
-    @apply text-2xl;
-    @apply font-bold;
+    @apply text-2xl font-bold;
   }
   h3 {
-    @apply text-xl;
-    @apply font-bold;
+    @apply text-xl font-bold;
   }
 }
 @tailwind components;
@@ -48,7 +45,7 @@ h3 {
 }
 
 .order-content {
-  @apply border-b border-gray-50 p-[10px];
+  @apply border-b border-gray-100 p-[10px];
 }
 
 .order-item {
@@ -56,7 +53,7 @@ h3 {
 }
 
 .order-quantitys {
-  @apply m-[5px] flex h-[35px] min-w-[100px] items-center rounded-[8px] p-[10px] shadow-[0px_6px_10px_0px_rgba(128,98,96,16%)];
+  @apply m-[5px] flex h-[32px] min-w-[100px] items-center rounded-[8px] p-[10px] shadow-[0px_6px_10px_0px_rgba(128,98,96,16%)];
 }
 
 .order-quantity-btn {
