@@ -64,7 +64,7 @@ const Input = props => {
         }`}
       >
         <input
-          className={`focus: block h-[25px] w-full rounded-[15px] border-none bg-transparent p-4 text-[#7d7d7d]  focus:border-black focus:bg-transparent focus:outline-none ${
+          className={`focus: block h-[25px] w-full rounded-[15px] border-none bg-transparent px-4 text-[#7d7d7d]  focus:border-black focus:bg-transparent focus:outline-none ${
             showError ? `caret-[#ff441f]` : null
           }`}
           id={props.id}

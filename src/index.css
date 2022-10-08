@@ -24,6 +24,7 @@ body {
   font-family: 'Lato', sans-serif;
   height: 100vh;
   background-color: #fafaf8;
+  overflow-x: hidden;
 }
 
 h1,
@@ -74,4 +75,8 @@ h3 {
 
 .wrapper {
   @apply flex flex-1 justify-around py-[150px];
+}
+
+.li-card {
+  @apply mb-[15px] flex justify-between text-[#9faab7];
 }
