@@ -19,7 +19,7 @@ const Orders = () => {
   }
   return (
     <div>
-      {show && <div div className="dialog-shadow" onClick={hadlerToggle} />}
+      {show && <div className="dialog-shadow" onClick={hadlerToggle} />}
       <div
         className={`fixed right-0 top-[75px] z-10 flex h-[calc(100%-75px)] w-[340px] flex-col bg-white shadow-[4px_0px_5px_4px] shadow-gray-500 ${
           show ? 'translate-x-0' : 'translate-x-full'

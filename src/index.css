@@ -67,3 +67,11 @@ h3 {
 .tag-card {
   @apply mx-[10px] flex cursor-pointer items-center rounded-[20px] p-[10px_20px] shadow-[0px_3px_5px_0px_rgba(0,0,0,9%)] transition-all duration-300 hover:bg-[#e8e8e8] hover:shadow-none;
 }
+
+.layout-page {
+  @apply mx-auto flex max-h-[900px] max-w-[1200px] flex-1 px-[20px];
+}
+
+.wrapper {
+  @apply flex flex-1 justify-around py-[150px];
+}
