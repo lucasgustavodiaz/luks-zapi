@@ -22,9 +22,12 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  height: 100vh;
   background-color: #fafaf8;
   overflow-x: hidden;
+}
+
+div#root {
+  height: 100vh;
 }
 
 h1,
@@ -70,11 +73,11 @@ h3 {
 }
 
 .layout-page {
-  @apply mx-auto flex max-h-[900px] max-w-[1200px] flex-1 px-[20px];
+  @apply mx-auto flex h-[calc(100%-75px)] min-h-[670px] max-w-[1200px] px-[20px];
 }
 
 .wrapper {
-  @apply flex flex-1 justify-around py-[150px];
+  @apply flex flex-1 justify-around;
 }
 
 .li-card {
