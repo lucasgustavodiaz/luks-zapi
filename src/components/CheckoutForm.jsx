@@ -51,7 +51,7 @@ const CheckoutForm = () => {
 
   return (
     <form className="form-styled" onSubmit={handlerSubmit}>
-      <div className="form-content">
+      <div className="form-content p-[30px] ">
         <Input
           id="domicilio"
           label="Domicilio"
