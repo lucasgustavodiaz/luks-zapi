@@ -47,7 +47,8 @@ const Login = () => {
               <Button text="Ingresar" styles="text-[14px] h-[40px]" />
               <Button
                 text="Login con Google"
-                styles="text-[14px] h-[40px] bg-gradient-to-br from-orange-500 to-red-500"
+                styles="text-[14px] h-[40px] bg-gradient-to-tl from-[#ff0038] to-[#ff9259]"
+                img={google_icon}
               />
             </div>
             <div className="flex justify-center p-[10px]">

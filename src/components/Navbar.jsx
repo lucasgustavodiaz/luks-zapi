@@ -25,7 +25,7 @@ const Navbar = () => {
         <Link to="/login">
           <Button
             text="Ingresar"
-            styles="text-[14px] m-[0px_5px] p-[10px_15px] bg-gradient-to-br from-orange-500 to-red-500 w-[auto] h-[35px] font-normal"
+            styles="text-[14px] m-[0px_5px] p-[10px_15px] bg-gradient-to-tl from-[#ff0038] to-[#ff9259] w-[auto] h-[35px] font-normal"
             onClick={handleToggleCart}
           />
         </Link>
