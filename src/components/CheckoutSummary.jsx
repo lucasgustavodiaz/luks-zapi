@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux'
 const CheckoutSummary = ({ isValid, subTotal, envio }) => {
   // const { loading } = useSelector(state => state.orders)
   const loading = false
-  console.log(isValid)
   return (
     <div className="w-full max-w-[600px] ">
       <div className="mt-[62px] w-full rounded-[15px] bg-white shadow-[0px_6px_10px_0px_rgba(128,98,96,16%)] ">

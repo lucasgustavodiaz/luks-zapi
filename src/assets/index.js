@@ -11,6 +11,8 @@ import tag_pizza from './tag_pizza.jpeg'
 import tag_sambu from './tag_sambu.jpeg'
 import icon_cart from './cart-icon.svg'
 import icon_del from './delete-full.svg'
+import google_icon from './google_icon.svg'
+import user from './user.svg'
 
 export {
   logo,
@@ -25,5 +27,7 @@ export {
   tag_pizza,
   tag_sambu,
   icon_cart,
-  icon_del
+  icon_del,
+  google_icon,
+  user
 }

@@ -13,12 +13,9 @@ const Cart = () => {
     dispatch(cartActions.toggleCartHidden())
   }
   return (
-    <div
-      onClick={handleToggleCart}
-      className="w-[45px] h-[45px] relative flex justify-center items-center cursor-pointer"
-    >
+    <div onClick={handleToggleCart} className="relative flex h-[45px] cursor-pointer items-center justify-center">
       <img src={icon_cart} alt="Carrito" className="h-[24px] w-[24px]" />
-      <div className="absolute text-[10px] font-bold bottom-[12px]">{quantity}</div>
+      <div className="absolute bottom-[12px] text-[10px] font-bold">{quantity}</div>
     </div>
   )
 }

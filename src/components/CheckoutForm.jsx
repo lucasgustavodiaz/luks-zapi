@@ -26,9 +26,32 @@ const CheckoutForm = () => {
     return acc + item.price * item.quantity
   }, 0)
 
+  const handlerSubmit = e => {
+    e.preventDefault()
+    if (!formState.isValid) {
+      console.log('Completar todo los dato PANCHOOOOO!!')
+      return
+    }
+    const orderData = {
+      userId: currentUser.id,
+      shippingDetails: {
+        domicilio: formState.inputs.domicilio.value,
+        localidad: formState.inputs.localidad.value
+      },
+      items: [...cartItems],
+      shippingPrice: CONSTO_ENVIO,
+      subtotal: subTotal,
+      total: CONSTO_ENVIO + subTotal
+    }
+    dispatch(orderActions.createOrder(orderData))
+    dispatch(cartActions.clearCart())
+
+    console.log('YEAAAA mandale no ma!')
+  }
+
   return (
-    <form className="z-2 flex w-full max-w-[600px] flex-col items-center justify-center">
-      <div className="w-full rounded-[15px] bg-white p-[30px] shadow-[0px_6px_10px_0px_rgba(128,98,96,16%)]">
+    <form className="form-styled" onSubmit={handlerSubmit}>
+      <div className="form-content">
         <Input
           id="domicilio"
           label="Domicilio"

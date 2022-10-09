@@ -23,11 +23,8 @@
 body {
   font-family: 'Lato', sans-serif;
   background-color: #fafaf8;
-  overflow-x: hidden;
-}
-
-div#root {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 h1,
@@ -73,7 +70,7 @@ h3 {
 }
 
 .layout-page {
-  @apply mx-auto flex h-[calc(100%-75px)] min-h-[670px] max-w-[1200px] px-[20px];
+  @apply mx-auto flex h-[calc(100vh-75px)] min-h-[670px] max-w-[1200px] px-[20px];
 }
 
 .wrapper {
@@ -82,4 +79,12 @@ h3 {
 
 .li-card {
   @apply mb-[15px] flex justify-between text-[#9faab7];
+}
+
+.form-styled {
+  @apply z-[2] flex w-full max-w-[600px] flex-col items-center justify-center;
+}
+
+.form-content {
+  @apply w-full rounded-[15px] bg-white p-[30px] shadow-[0px_6px_10px_0px_rgba(128,98,96,16%)];
 }

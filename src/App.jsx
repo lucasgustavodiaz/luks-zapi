@@ -2,7 +2,7 @@ import { Navbar, Orders } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useOpenFood } from './hooks/useOpenFood'
 
-import { Home, Checkout } from './pages/'
+import { Home, Checkout, Login } from './pages/'
 
 const App = () => {
   const openFood = useOpenFood()
@@ -13,6 +13,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home openFood={openFood} />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Home openFood={openFood} />} />
       </Routes>
     </BrowserRouter>
   )
