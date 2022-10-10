@@ -1,7 +1,6 @@
-import firebase from 'firebase'
-
-import 'firebase/firestore'
-import 'firebase/auth'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/auth'
+import 'firebase/compat/firestore'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyC2eZNybnKoDbbb8go13KfwKTOV1X75oVo',
@@ -17,7 +16,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
   const userRef = firestore.doc(`users/${userAuth.uid}`)
   const snapShot = await userRef.get()
-  console.log(additionalData)
 
   if (!snapShot.exists) {
     const { displayName, email } = userAuth
