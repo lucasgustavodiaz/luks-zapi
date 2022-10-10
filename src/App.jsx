@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Navbar, Orders } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useOpenFood } from './hooks/useOpenFood'
@@ -24,7 +24,6 @@ function onAuthStateChange(cb, action) {
 
 const App = () => {
   const openFood = useOpenFood()
-  const currentUser = useSelector(state => state.user.currentUser)
   const dispatch = useDispatch()
   useEffect(() => {
     const unsubcribe = onAuthStateChange(dispatch, userActions.setCurrentUser)
