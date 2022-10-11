@@ -1,11 +1,24 @@
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import Input from './Input'
 import CheckoutSummary from './CheckoutSummary'
 import useForm from '../hooks/useForm'
 import { VALIDATOR_REQUIRE } from '../utils'
 import { CONSTO_ENVIO } from '../utils'
-import { useSelector } from 'react-redux'
+import * as orderActions from '../redux/orders/order-actions'
+import * as cartActions from '../redux/cart/cart-actions'
 
 const CheckoutForm = () => {
+  const dispatch = useDispatch()
+  const navigateTo = useNavigate()
+  const currentUser = useSelector(state => state.user.currentUser)
+  const { cartItems } = useSelector(state => state.cart)
+  const { purchased } = useSelector(state => state.orders)
+  const subTotal = cartItems.reduce((acc, item) => {
+    return acc + item.price * item.quantity
+  }, 0)
+
   const [formState, inputHandler] = useForm(
     {
       domicilio: {
@@ -20,16 +33,10 @@ const CheckoutForm = () => {
     false
   )
 
-  const { cartItems } = useSelector(state => state.cart)
-
-  const subTotal = cartItems.reduce((acc, item) => {
-    return acc + item.price * item.quantity
-  }, 0)
-
   const handlerSubmit = e => {
     e.preventDefault()
     if (!formState.isValid) {
-      console.log('Completar todo los dato PANCHOOOOO!!')
+      console.log('Completar todo los dato!!')
       return
     }
     const orderData = {
@@ -46,8 +53,15 @@ const CheckoutForm = () => {
     dispatch(orderActions.createOrder(orderData))
     dispatch(cartActions.clearCart())
 
-    console.log('YEAAAA mandale no ma!')
+    console.log('Todo ready!')
   }
+
+  useEffect(() => {
+    if (purchased) {
+      dispatch(orderActions.purchaseInit())
+      navigateTo('/mis-ordenes')
+    }
+  }, [purchased, navigateTo])
 
   return (
     <form className="form-styled" onSubmit={handlerSubmit}>
