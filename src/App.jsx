@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { auth, createUserProfileDocument } from './firebase/firebase.util'
 import * as userActions from './redux/user/user-actions'
 
-import { Home, Checkout, Login } from './pages/'
+import { Home, Checkout, Login, MyOrders, Resume } from './pages/'
 
 function onAuthStateChange(cb, action) {
   auth.onAuthStateChanged(async userAuth => {
@@ -40,6 +40,8 @@ const App = () => {
         <Route path="/" element={<Home openFood={openFood} />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/mis-ordenes" element={<MyOrders />} />
+        <Route path={`/mis-ordenes/:orderId`} element={<Resume />} />
         <Route path="*" element={<Home openFood={openFood} />} />
       </Routes>
     </BrowserRouter>

@@ -13,6 +13,7 @@ import icon_cart from './cart-icon.svg'
 import icon_del from './delete-full.svg'
 import google_icon from './google_icon.svg'
 import user from './user.svg'
+import checkout from './checkout.jpg'
 
 export {
   logo,
@@ -29,5 +30,6 @@ export {
   icon_cart,
   icon_del,
   google_icon,
-  user
+  user,
+  checkout
 }
