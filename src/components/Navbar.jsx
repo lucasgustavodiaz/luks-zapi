@@ -34,7 +34,6 @@ const Navbar = () => {
           <div className="relaive">
             <img src={user} alt="usuario" className="h-[32px] w-[32px] cursor-pointer" onClick={handleToggle} />
             <UserMenu user={currentUser} />
-            {/* <img src={user} alt="usuario" className="h-[32px] w-[32px] cursor-pointer" onClick={() => auth.signOut()} /> */}
           </div>
         ) : (
           <Link to="/login">

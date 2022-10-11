@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Input from '../components/Input'
 import useForm from '../hooks/useForm'
 import Button from '../components/Button'
@@ -26,9 +26,11 @@ const Login = () => {
     false
   )
 
-  if (currentUser) {
-    navigateTo(-1)
-  }
+  useEffect(() => {
+    if (currentUser) {
+      navigateTo(-1)
+    }
+  }, [currentUser, navigateTo])
 
   const switchModeHandler = () => {
     if (!isLoginMode) {
