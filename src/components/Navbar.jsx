@@ -32,8 +32,13 @@ const Navbar = () => {
           <Cart />
           <div className="mx-[25px] inline-block h-[25px] border-l border-gray-300" />
           {currentUser ? (
-            <div>
-              <img src={user} alt="usuario" className="h-[32px] w-[32px] cursor-pointer" onClick={handleToggle} />
+            <div className="relative">
+              <img
+                src={user}
+                alt="usuario"
+                className="h-[32px] w-[32px] min-w-[32px] cursor-pointer"
+                onClick={handleToggle}
+              />
               <UserMenu user={currentUser} />
             </div>
           ) : (

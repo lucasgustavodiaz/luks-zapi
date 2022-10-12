@@ -17,9 +17,9 @@ const UserMenu = ({ user }) => {
         <div onClick={handleToggle} className="fixed top-0 left-0 z-[11] h-[100vh] w-[100vw] bg-[rgba(0,0,0,0.5)]" />
       )}
       {!hiddenMenu ? (
-        <div className="visible absolute top-[78px] right-0 z-[12] flex flex-col items-center justify-center rounded-[8px] border border-[#c7c7c7] bg-white opacity-100">
-          <div className="w-[100%] border-b border-[#e5edef] p-[10px_20px] pb-[5px]">Hola {user.displayName}</div>
-          <div className="w-[100%]">
+        <div className="visible absolute top-[58px] right-[-52px] z-[12] flex flex-col items-center justify-center rounded-[8px] border border-[#c7c7c7] bg-white opacity-100 lg:right-[-90px]">
+          <div className=" border-b border-[#e5edef] p-[10px_20px] pb-[5px]">Hola {user.displayName}</div>
+          <div className="">
             <Link to="/mis-ordenes" onClick={handleToggle}>
               <div className="cursor-pointer p-[15px_20px] text-[14px] text-[#7d7d7d] transition-all duration-300 ease-linear hover:bg-[rgba(255,68,31,0.04)] hover:text-[#ff441f]">
                 Mís Ordenes
@@ -27,7 +27,7 @@ const UserMenu = ({ user }) => {
             </Link>
 
             <div
-              className="cursor-pointer p-[15px_20px] text-[14px] text-[#7d7d7d] transition-all duration-300 ease-linear hover:bg-[rgba(255,68,31,0.04)] hover:text-[#ff441f]"
+              className="w-[200px] cursor-pointer p-[15px_20px] text-[14px] text-[#7d7d7d] transition-all duration-300 ease-linear hover:bg-[rgba(255,68,31,0.04)] hover:text-[#ff441f]"
               onClick={() => auth.signOut()}
             >
               Cerrar Sesíon
