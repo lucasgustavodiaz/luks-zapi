@@ -36,7 +36,7 @@ const Menu = ({ setOpenFood }) => {
           return (
             <div>
               <h3 className="border-b border-orange-400 py-[10px]">{sectionKey}</h3>
-              <div className="grid grid-cols-3 gap-5 p-[50px]">
+              <div className="grid grid-cols-1 gap-5 p-0 pt-[50px] ss:grid-cols-2 sm:grid-cols-3 sm:p-[50px] ">
                 {foods.map(food => {
                   return <FoodCard key={food.id} {...food} onClick={() => setOpenFood(food)} />
                 })}

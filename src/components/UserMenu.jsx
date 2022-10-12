@@ -17,7 +17,7 @@ const UserMenu = ({ user }) => {
         <div onClick={handleToggle} className="fixed top-0 left-0 z-[11] h-[100vh] w-[100vw] bg-[rgba(0,0,0,0.5)]" />
       )}
       {!hiddenMenu ? (
-        <div className="visible absolute top-[135%] right-0 z-[12] flex flex-col items-center justify-center rounded-[8px] border border-[#c7c7c7] bg-white opacity-100">
+        <div className="visible absolute top-[78px] right-0 z-[12] flex flex-col items-center justify-center rounded-[8px] border border-[#c7c7c7] bg-white opacity-100">
           <div className="w-[100%] border-b border-[#e5edef] p-[10px_20px] pb-[5px]">Hola {user.displayName}</div>
           <div className="w-[100%]">
             <Link to="/mis-ordenes" onClick={handleToggle}>

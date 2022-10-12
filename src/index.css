@@ -66,7 +66,7 @@ h3 {
 }
 
 .tag-card {
-  @apply mx-[10px] flex cursor-pointer items-center rounded-[20px] p-[10px_20px] shadow-[0px_3px_5px_0px_rgba(0,0,0,9%)] transition-all duration-300 hover:bg-[#e8e8e8] hover:shadow-none;
+  @apply mx-[10px] flex min-w-fit cursor-pointer items-center rounded-[20px] p-[10px_20px] shadow-[0px_3px_5px_0px_rgba(0,0,0,9%)] transition-all duration-300 hover:bg-[#e8e8e8] hover:shadow-none;
 }
 
 .layout-page {
@@ -87,4 +87,34 @@ h3 {
 
 .form-content {
   @apply w-full rounded-[15px] bg-white shadow-[0px_6px_10px_0px_rgba(128,98,96,16%)];
+}
+
+.order-status-container {
+  @apply flex h-[auto] min-h-[calc(100vh-75px)] w-[100%] items-start justify-center bg-cover bg-fixed bg-center p-[10px] before:fixed before:top-0 before:left-0 before:h-[100%] before:w-[100%] before:bg-gradient-to-tl before:from-[#f83600] before:to-[#ff9259] before:mix-blend-color before:content-[''] after:fixed after:top-0 after:left-0 after:h-[100%] after:w-[100%] after:bg-[#000000bd] after:content-[''] ss:items-center;
+}
+
+.order-status-wrapper {
+  @apply z-[10] min-h-[100vh] w-[100%] ss:w-[70%];
+}
+
+.order-status-history {
+  @apply w-[100%] rounded-[20px] bg-[#0000003d] p-[0px] text-white backdrop-blur-[20px] ss:p-[30px];
+}
+
+.h1-principal {
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin: 0px 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.p-principal {
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  width: 100%;
+  margin: 50px 20px 0px;
+  border-top: 1px solid rgb(255, 131, 82);
+  border-bottom: 1px solid rgb(255, 131, 82);
+  padding: 20px;
+  z-index: 2;
 }
