@@ -38,7 +38,7 @@ h3 {
 }
 
 .dialog-shadow {
-  @apply fixed z-[4] h-[100%] w-[100%] bg-black/90;
+  @apply fixed z-[96] h-[100%] w-[100%] bg-black/90;
 }
 
 .order-container {

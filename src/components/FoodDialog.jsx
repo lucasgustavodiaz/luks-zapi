@@ -18,7 +18,7 @@ const FoodDialogContainer = ({ openFood, setOpenFood }) => {
   return (
     <div>
       <div div className="dialog-shadow" onClick={handlerClose} />
-      <div className="fixed top-[150px] left-[calc(50%-250px)] z-[30] flex max-h-[calc(100%-100px)] w-[500px] flex-col rounded-lg bg-white">
+      <div className="fixed top-[150px] left-[calc(50%-250px)] z-[97] flex max-h-[calc(100%-100px)] w-[500px] flex-col rounded-lg bg-white">
         <div
           className="mb-[20px] min-h-[150px] rounded-t-lg bg-cover bg-center"
           style={{ backgroundImage: `url(${openFood.img})` }}

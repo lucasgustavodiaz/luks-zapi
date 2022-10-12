@@ -19,6 +19,9 @@ const Navbar = () => {
   }
 
   const handleToggle = () => {
+    if (show) {
+      dispatch(cartActions.toggleCartHidden())
+    }
     dispatch(userActions.toggleMenuHidden())
   }
 
