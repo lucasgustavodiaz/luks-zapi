@@ -1,4 +1,4 @@
-import logo from './nucbazapi.png'
+import logo from './lukszapi.png'
 import banner from './banner.jpg'
 import burger1 from './burger1.jpg'
 import burger2 from './burger2.jpg'

@@ -16,7 +16,7 @@ const MyOrders = () => {
   }, [dispatch, currentUser])
 
   // useEffect(() => {
-  //   if (currentUser) {
+  //   if (!currentUser) {
   //     navigateTo('/')
   //   }
   // }, [currentUser, navigateTo])

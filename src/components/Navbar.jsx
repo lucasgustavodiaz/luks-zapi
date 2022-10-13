@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 right-0 z-[999] flex h-[75px] w-full items-center justify-center border-b border-[#e5edef] bg-white p-[10px]">
       <div className="items flex h-[100%] w-[100%] max-w-[1200px] items-center justify-between ">
-        <Link to="/" className="h-[100%] max-h-[100%]">
+        <Link to="/" className="h-[auto] max-h-[100%]">
           <img src={logo} alt="logo sitio" className="h-auto max-h-[100%] max-w-[200px]" onClick={handleToggleCart} />
         </Link>
         <div className="mr-[20px] flex items-center p-[15px]">
