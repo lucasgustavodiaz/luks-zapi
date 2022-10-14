@@ -18,7 +18,7 @@ const OrdersStatus = ({ orders }) => {
           </div>
           <div>
             {orders.map(order => (
-              <div className="mb-[30px] flex h-[200px] flex-row items-center justify-center overflow-hidden rounded-[8px] border border-[#e5edef] bg-white">
+              <div className="mb-[30px] flex h-[auto] flex-row items-center justify-center overflow-hidden rounded-[8px] border border-[#e5edef] bg-white">
                 <div className="relative flex w-[100%] flex-wrap items-center justify-between gap-[10px] p-[30px] sm:flex-nowrap">
                   <div className="flex w-[100%] flex-col justify-center">
                     {/* SACAR W-100 */}
