@@ -19,8 +19,8 @@ const OrdersStatus = ({ orders }) => {
           <div>
             {orders.map(order => (
               <div className="mb-[30px] flex h-[auto] flex-row items-center justify-center overflow-hidden rounded-[8px] border border-[#e5edef] bg-white">
-                <div className="relative flex w-[100%] flex-wrap items-center justify-between gap-[10px] p-[30px] sm:flex-nowrap">
-                  <div className="flex w-[100%] flex-col justify-center">
+                <div className="relative flex w-[100%] flex-wrap items-center gap-[10px] p-[30px]">
+                  <div className="flex flex-1 flex-col justify-center">
                     {/* SACAR W-100 */}
                     <p className="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap align-top leading-[1.7] text-[#7d7d7d]">
                       <span className="inline-block min-w-[50px] pr-[5px] text-[#332927]">Fecha:</span>
@@ -31,20 +31,18 @@ const OrdersStatus = ({ orders }) => {
                       {formatPrice(order.total)}
                     </p>
                   </div>
-                  <div className="flex items-center justify-center">
-                    <div
-                      className={`rounded-[0px_8px] p-[8px_18px] text-center font-semibold ${
-                        order.status == 'aprobado'
-                          ? 'bg-[rgba(12,198,101,.1)] text-[#0cc665]'
-                          : order.status == 'pendiente'
-                          ? 'bg-[rgba(255,213,89,.09)] text-[#ffd559]'
-                          : order.status == 'cancelado'
-                          ? 'bg-[rgba(255,68,31,.09)] text-[#ff441f]'
-                          : null
-                      }`}
-                    >
-                      {order.status}
-                    </div>
+                  <div
+                    className={`rounded-[0px_8px] p-[8px_18px] text-center font-semibold ${
+                      order.status == 'aprobado'
+                        ? 'bg-[rgba(12,198,101,.1)] text-[#0cc665]'
+                        : order.status == 'pendiente'
+                        ? 'bg-[rgba(255,213,89,.09)] text-[#ffd559]'
+                        : order.status == 'cancelado'
+                        ? 'bg-[rgba(255,68,31,.09)] text-[#ff441f]'
+                        : null
+                    }`}
+                  >
+                    {order.status}
                   </div>
                   <Link to={`${pathname}/${order.id}`}>
                     <Button
