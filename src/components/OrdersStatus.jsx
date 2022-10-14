@@ -46,14 +46,12 @@ const OrdersStatus = ({ orders }) => {
                       {order.status}
                     </div>
                   </div>
-                  <div>
-                    <Link to={`${pathname}/${order.id}`}>
-                      <Button
-                        text="Ver resumen"
-                        styles="w-[150px] m-[0px] bg-gradient-to-tl from-[#ff0038] to-[#ff9259]"
-                      />
-                    </Link>
-                  </div>
+                  <Link to={`${pathname}/${order.id}`}>
+                    <Button
+                      text="Ver resumen"
+                      styles="w-[150px] m-[0px] bg-gradient-to-tl from-[#ff0038] to-[#ff9259]"
+                    />
+                  </Link>
                 </div>
               </div>
             ))}
