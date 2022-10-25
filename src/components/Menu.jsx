@@ -1,8 +1,11 @@
 import FoodCard from './FoodCard'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { useCategories } from '../hooks/useCategories'
 
 const Menu = ({ setOpenFood }) => {
+  const cates = useCategories()
+  console.log(cates)
   const [section, setSection] = useState(null)
   let Foods = useSelector(state => state.products.foods)
   const Categories = useSelector(state => state.categories.categories)
