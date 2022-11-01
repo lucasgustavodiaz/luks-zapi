@@ -62,7 +62,7 @@ h3 {
 }
 
 .tag-menu {
-  @apply my-7 flex justify-evenly;
+  @apply my-7 flex flex-wrap justify-evenly gap-y-5;
 }
 
 .tag-card {

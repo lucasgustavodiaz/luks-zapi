@@ -119,7 +119,7 @@ const Login = () => {
                 errorText="Campo Obligatorio"
               />
             </div>
-            <div className="flex p-[10px]">
+            <div className="flex flex-col items-center p-[10px] xs:flex-row">
               <Button text={isLoginMode ? 'Ingresar' : 'Registrarme'} styles="text-[14px] h-[40px]" />
               <Button
                 text="Login con Google"
