@@ -32,13 +32,13 @@ const Navbar = () => {
           <img
             src={logo}
             alt="logo sitio"
-            className="h-auto max-h-[100%] max-w-[170px] xs:max-w-[200px]"
+            className="h-auto max-h-[100%] max-w-[120px] bs:max-w-[170px] xs:max-w-[200px]"
             onClick={handleToggleCart}
           />
         </Link>
         <div className="mr-[20px] flex items-center p-[15px]">
           <Cart />
-          <div className="mx-[25px] inline-block h-[25px] border-l border-gray-300" />
+          <div className="ml-[15px] inline-block h-[25px] border-l border-gray-300 bs:mx-[25px]" />
           {currentUser ? (
             <div className="relative">
               <img

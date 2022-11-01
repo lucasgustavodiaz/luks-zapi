@@ -21,7 +21,7 @@ const Orders = () => {
     <div>
       {show && <div className="dialog-shadow" onClick={hadlerToggle} />}
       <div
-        className={`fixed right-0 top-[75px] z-[98] flex h-[calc(100%-75px)] w-[340px] flex-col bg-white shadow-[4px_0px_5px_4px] shadow-gray-500 ${
+        className={`fixed right-0 top-[75px] z-[98] flex h-[calc(100%-75px)] w-[305px] flex-col bg-white shadow-[4px_0px_5px_4px] shadow-gray-500 bs:w-[340px] ${
           show ? 'translate-x-0' : 'translate-x-full'
         } transition-transform duration-500`}
       >
