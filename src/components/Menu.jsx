@@ -13,7 +13,7 @@ const Menu = ({ setOpenFood }) => {
 
   return (
     <div className="z-10 flex justify-center">
-      <div className="w-[100%] max-w-[1200px] py-[50px] px-[50px]">
+      <div className="w-[100%] max-w-[1200px] p-[25px] bs:p-[50px]">
         <h2 className="border-y border-orange-400 py-[10px]">Menu</h2>
         <div className="tag-menu">
           {section && (

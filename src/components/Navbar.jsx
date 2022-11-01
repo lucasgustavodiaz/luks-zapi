@@ -38,7 +38,7 @@ const Navbar = () => {
         </Link>
         <div className="mr-[20px] flex items-center p-[15px]">
           <Cart />
-          <div className="ml-[15px] inline-block h-[25px] border-l border-gray-300 bs:mx-[25px]" />
+          <div className="mx-[20px] inline-block h-[25px] border-l border-gray-300 bs:mx-[25px]" />
           {currentUser ? (
             <div className="relative">
               <img
